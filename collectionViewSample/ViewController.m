@@ -9,12 +9,15 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+<<<<<<< HEAD
 {
     NSArray *collectionImages;
     NSArray *foodItemNames;
     NSIndexPath *selectedCellIndex;
     BOOL isDetailView;
 }
+=======
+>>>>>>> parent of 1f64159... CollectionView Demo
 
 @end
 
@@ -22,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
     collectionImages = [NSArray arrayWithObjects:@"image1.png",@"image2.png",@"image3.png",@"image4.png",@"image5.png",@"image6.png",@"image7.png",@"image8.png", @"image9.png",@"image10.png",@"image11.png",nil];
     foodItemNames = [NSArray arrayWithObjects:@"Finger Chips",@"Burgur",@"Bread Omlet",@"Pizza",@"Sanwich",@"Finger Chips",@"Omlet",@"Bread stufing",@"Noodles",@"Sweat Paniyaram",@"Corns", nil];
     isDetailView = TRUE;
@@ -89,10 +93,10 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     
     selectedCellIndex=indexPath;
     
+=======
+    // Do any additional setup after loading the view, typically from a nib.
+>>>>>>> parent of 1f64159... CollectionView Demo
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
