@@ -25,6 +25,7 @@
 		233D44DA1CA3EFED00D8F05D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233D44D91CA3EFED00D8F05D /* Images.xcassets */; };
 		233D44E91CA3EFED00D8F05D /* collectionViewSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 233D44E81CA3EFED00D8F05D /* collectionViewSampleTests.m */; };
 		233D44FE1CA417E200D8F05D /* launchbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 233D44F61CA417E200D8F05D /* launchbtn.png */; };
+		2343303F1CA65C9D00BF847D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2343303D1CA65C9D00BF847D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,13 +58,13 @@
 		233D44D11CA3EFED00D8F05D /* collectionViewSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = collectionViewSample.xcdatamodel; sourceTree = "<group>"; };
 		233D44D31CA3EFED00D8F05D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		233D44D41CA3EFED00D8F05D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		233D44D71CA3EFED00D8F05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		233D44D91CA3EFED00D8F05D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		233D44DC1CA3EFED00D8F05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		233D44E21CA3EFED00D8F05D /* collectionViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectionViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		233D44E71CA3EFED00D8F05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		233D44E81CA3EFED00D8F05D /* collectionViewSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collectionViewSampleTests.m; sourceTree = "<group>"; };
 		233D44F61CA417E200D8F05D /* launchbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchbtn.png; sourceTree = "<group>"; };
+		2343303E1CA65C9D00BF847D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +117,12 @@
 		233D44C81CA3EFED00D8F05D /* collectionViewSample */ = {
 			isa = PBXGroup;
 			children = (
+				2343303D1CA65C9D00BF847D /* Main.storyboard */,
 				233D44CD1CA3EFED00D8F05D /* AppDelegate.h */,
 				233D44CE1CA3EFED00D8F05D /* AppDelegate.m */,
 				233D44D31CA3EFED00D8F05D /* ViewController.h */,
 				233D44D41CA3EFED00D8F05D /* ViewController.m */,
 				233D44F61CA417E200D8F05D /* launchbtn.png */,
-				233D44D61CA3EFED00D8F05D /* Main.storyboard */,
 				233D44D91CA3EFED00D8F05D /* Images.xcassets */,
 				233D44DB1CA3EFED00D8F05D /* LaunchScreen.xib */,
 				233D44D01CA3EFED00D8F05D /* collectionViewSample.xcdatamodeld */,
@@ -243,6 +244,7 @@
 				2303A0B31CA569DE0059B7EC /* image4.png in Resources */,
 				2303A0B91CA569DE0059B7EC /* image10.png in Resources */,
 				2303A0B41CA569DE0059B7EC /* image5.png in Resources */,
+				2343303F1CA65C9D00BF847D /* Main.storyboard in Resources */,
 				2303A0B51CA569DE0059B7EC /* image6.png in Resources */,
 				233D44DA1CA3EFED00D8F05D /* Images.xcassets in Resources */,
 				2303A0B71CA569DE0059B7EC /* image8.png in Resources */,
@@ -292,20 +294,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		233D44D61CA3EFED00D8F05D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				233D44D71CA3EFED00D8F05D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		233D44DB1CA3EFED00D8F05D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				233D44DC1CA3EFED00D8F05D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		2343303D1CA65C9D00BF847D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2343303E1CA65C9D00BF847D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -14,7 +14,6 @@
     NSArray *foodItemNames;
     NSIndexPath *selectedCellIndex;
     BOOL isDetailView;
-    NSMutableArray *indexPathArray;
 }
 
 @end
@@ -23,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    indexPathArray =[[NSMutableArray alloc]init];
     collectionImages = [NSArray arrayWithObjects:@"image1.png",@"image2.png",@"image3.png",@"image4.png",@"image5.png",@"image6.png",@"image7.png",@"image8.png", @"image9.png",@"image10.png",@"image11.png",nil];
     foodItemNames = [NSArray arrayWithObjects:@"Finger Chips",@"Burgur",@"Bread Omlet",@"Pizza",@"Sanwich",@"Finger Chips",@"Omlet",@"Bread stufing",@"Noodles",@"Sweat Paniyaram",@"Corns", nil];
     isDetailView = TRUE;
@@ -58,7 +56,7 @@
     [cancel setTitle:[foodItemNames objectAtIndex:indexPath.row] forState:UIControlStateNormal];
     [backgroundView addSubview:cancel];
     cell.selectedBackgroundView = backgroundView;
-    [cell bringSubviewToFront:cell.selectedBackgroundView];
+    //[cell bringSubviewToFront:cell.selectedBackgroundView];
     return cell;
     
 }
@@ -72,27 +70,24 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath
     
     UICollectionViewCell *cell1 = [collectionView cellForItemAtIndexPath:indexPath];
     
+    if(selectedCellIndex!=NULL)
+    {
+        UICollectionViewCell *cell2 = [collectionView cellForItemAtIndexPath:selectedCellIndex];
+        [UIView transitionFromView:cell2.selectedBackgroundView toView:cell2.contentView duration:0.5 options:UIViewAnimationOptionCurveLinear |UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
+    }
+
+    if([selectedCellIndex isEqual:indexPath] && isDetailView)
+    {
+        [cell1 setSelected:NO];
+        [UIView transitionFromView:cell1.selectedBackgroundView toView:cell1.contentView duration:0.5 options:UIViewAnimationOptionCurveLinear |UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
+        isDetailView = FALSE;
+    }
+    else{
+        [UIView transitionFromView:cell1.contentView toView:cell1.selectedBackgroundView duration:0.5 options:UIViewAnimationOptionCurveLinear |UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
+        isDetailView = TRUE;
+    }
     
-    
-    
-//    if([selectedCellIndex isEqual:indexPath] && isDetailView)
-//    {
-//        [cell1 setSelected:NO];
-//        [UIView transitionFromView:cell1.selectedBackgroundView toView:cell1.contentView duration:0.5 options:UIViewAnimationOptionCurveLinear |UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
-//        isDetailView = FALSE;
-//    }
-//    else{
-//        [UIView transitionFromView:cell1.contentView toView:cell1.selectedBackgroundView duration:0.5 options:UIViewAnimationOptionCurveLinear |UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
-//        isDetailView = TRUE;
-//    }
-//    
-//    if(selectedCellIndex!=NULL)
-//    {
-//        UICollectionViewCell *cell2 = [collectionView cellForItemAtIndexPath:selectedCellIndex];
-//        [UIView transitionFromView:cell2.selectedBackgroundView toView:cell2.contentView duration:0.5 options:UIViewAnimationOptionCurveLinear |UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
-//    }
-//
-//    selectedCellIndex=indexPath;
+    selectedCellIndex=indexPath;
     
 }
 
